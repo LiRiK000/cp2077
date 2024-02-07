@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import HeroComp from "./components/HeroComp/HeroComp";
 import Preloader from './components/Preloader/Preloader';
+import Layout from "./components/Layout/Layout";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +11,7 @@ function App() {
   }, []);
   return (
     <>
-      {isLoading ? <Preloader /> : <HeroComp />}
+      {isLoading ? <Preloader /> : <Layout />}
     </>
   );
 }

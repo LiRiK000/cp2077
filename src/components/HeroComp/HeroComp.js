@@ -12,9 +12,25 @@ function HeroComp() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage(prevImage => (prevImage + 1) % images.length);
-        }, 10000);
+        }, 5000);
         return () => clearInterval(interval);
     }, [images.length]);
+
+    const sizeMapping = {
+        base: 'sm',
+        sm: 'md',
+        md: 'md',
+        lg: 'lg',
+    };
+
+    const textSizes = {
+        base: 'md',
+        sm: 'lg',
+        md: 'xl',
+        lg: '2xl',
+        xl: '3xl',
+        '2xl': '4xl',
+    };
 
     const variant = useBreakpointValue({ base: "base", sm: "sm", md: "md", lg: "lg", xl: 'xl', '2xl': '2xl' });
 
@@ -39,16 +55,10 @@ function HeroComp() {
                 top={variant === 'base' || variant === 'sm' ? '80dvh' : '70dvh'}
                 color="white"
             >
-                <Text fontSize="3xl" mb={4} color="primary.500">
+                <Text fontSize={textSizes[variant]} color='primary.500'>
                     Доступно на всех платформах
                 </Text>
-                <Button variant="primary" size={
-                    variant === 'base' ? 'sm' :
-                        variant === 'sm' ? 'md' :
-                            variant === 'md' ? 'md' :
-                                variant === 'lg' ? 'lg'
-                                    : null
-                }>
+                <Button variant="primary" size={sizeMapping[variant]}>
                     Узнать больше
                 </Button>
             </Box>
