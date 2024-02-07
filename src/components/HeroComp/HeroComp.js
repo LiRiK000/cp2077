@@ -4,9 +4,9 @@ import { Box, Text, Button, useBreakpointValue } from "@chakra-ui/react";
 function HeroComp() {
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
-        "/img/1.jpg",
-        "/img/2.jpg",
-        "/img/3.jpg",
+        "/img/1.webp",
+        "/img/2.webp",
+        "/img/3.webp",
     ];
 
     useEffect(() => {
@@ -36,7 +36,7 @@ function HeroComp() {
                 textAlign="center"
                 w={variant === 'base' || variant === 'sm' ? '100dvw' : '35dvw'}
                 right='0'
-                top={variant === 'base' || variant === 'sm' ? '100dvh' : '70dvh'}
+                top={variant === 'base' || variant === 'sm' ? '80dvh' : '70dvh'}
                 color="white"
             >
                 <Text fontSize="3xl" mb={4} color="primary.500">

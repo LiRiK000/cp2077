@@ -1,6 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+    styles: {
+        global: {
+            'html, body':{
+                overflowX: 'hidden'
+            }
+        }
+    },
     colors: {
         primary: {
             500: "#000000",
@@ -59,7 +66,7 @@ const theme = extendTheme({
         sm: "320px",
         md: "768px",
         lg: "1024px",
-        xl:'400000px',
+        xl: '400000px',
         '2xl': '500000px'
     },
 });
