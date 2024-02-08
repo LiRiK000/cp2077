@@ -11,7 +11,7 @@ import {
     Box,
     Button
 } from '@chakra-ui/react';
-import { CopyIcon, StarIcon, ViewIcon } from '@chakra-ui/icons'
+import { CopyIcon, CalendarIcon, ViewIcon } from '@chakra-ui/icons'
 
 function Buy() {
     const headingSizes = {
@@ -36,7 +36,7 @@ function Buy() {
     return (
         <VStack as='section'>
             <Container maxW='100%' maxH='max-content' bg='primary.500' color='white'>
-                <SimpleGrid ml='10%' columns={[1, null, 2]} spacing='50px'>
+                <SimpleGrid columns={[1, null, 2]} spacing='50px'>
                     <Box>
                         <Image src='/img/13.webp' loading='lazy' />
                     </Box>
@@ -44,15 +44,15 @@ function Buy() {
                         <Heading fontSize={headingSizes[variant]} mb='30'>Купить игру Cyberpunk 2077</Heading>
                         <List spacing={3} mb='30px'>
                             <ListItem>
-                                <ViewIcon />
+                                <ViewIcon mr='1' />
                                 Футляр с игровыми дисками
                             </ListItem>
                             <ListItem>
-                                <StarIcon />
+                                <CalendarIcon mr='1' />
                                 Футляр с кодом для загрузки игры и дисками (pc)
                             </ListItem>
                             <ListItem>
-                                <CopyIcon />
+                                <CopyIcon mr='1' />
                                 Справочник с информацией об игровом мире
                             </ListItem>
                         </List>

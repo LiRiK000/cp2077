@@ -67,15 +67,15 @@ function HP() {
                         </Text>
                         <List spacing={3} mb='30px'>
                             <ListItem>
-                                <ViewIcon />
+                                <ViewIcon mr='1' />
                                 Яркие насыщенные цвета
                             </ListItem>
                             <ListItem>
-                                <StarIcon />
+                                <StarIcon mr='1' />
                                 Кристальная четкость изображения
                             </ListItem>
                             <ListItem>
-                                <CopyIcon />
+                                <CopyIcon mr='1' />
                                 Быстрые движения и плавный геймплей
                             </ListItem>
                         </List>
