@@ -42,20 +42,23 @@ const theme = extendTheme({
                     padding: "16px 32px",
                 },
             },
-            // Варианты цветов кнопки (например, primary, secondary)
             variants: {
                 primary: {
                     bg: "primary.500",
-                    color: "white",
+                    color: "secondary.500",
                     _hover: {
-                        bg: "#333",
+                        bg: "yellow",
+                        color: "black",
+                        border: "3px solid black",
                     },
                 },
                 secondary: {
                     bg: "secondary.500",
-                    color: "black",
+                    color: "primary.500",
                     _hover: {
-                        bg: "gray.600",
+                        bg: "black",
+                        color: "yellow",
+                        border: "3px solid yellow",
                     },
                 },
             }

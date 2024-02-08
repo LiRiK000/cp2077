@@ -5,15 +5,13 @@ import {
     useBreakpointValue,
     Heading,
     Text,
-    Checkbox,
-    FormControl,
-    FormLabel,
-    Input,
-    FormHelperText,
+    List,
+    ListItem,
     Image,
     Box,
     Button
 } from '@chakra-ui/react';
+import { CopyIcon, StarIcon, ViewIcon } from '@chakra-ui/icons'
 import { React } from 'react';
 
 function HP() {
@@ -23,7 +21,7 @@ function HP() {
         base: 'md',
         sm: 'lg',
         md: 'xl',
-        lg: '2xl',
+        lg: 'xl',
         xl: '3xl',
         '2xl': '4xl',
     };
@@ -35,40 +33,53 @@ function HP() {
         xl: '7xl',
         '2xl': '7xl',
     };
+    
+    const sizeMapping = {
+        base: 'sm',
+        sm: 'md',
+        md: 'md',
+        lg: 'lg',
+    };
+
     return (
         <VStack as='section' style={{ gap: '0' }}>
             <Container maxW='100%' maxH='max-content' bg='secondary.500' color='primary.500'>
-                <Heading fontSize={headingSizes[variant]} ml='10%' mb='30px' color='white'>Играй и выигрывай!</Heading>
-                <Text maxW='70%' wordBreak='break-word' fontSize={textSizes[variant]} ml='10%' mb='30px'>
-                    Играй в
-                    <span style={{ color: 'blue' }}> Cyberpunk 2077 </span>
-                    и получи возможность выиграть консоль
-                    <span style={{ color: 'blue' }}> Xbox Series X </span>
-                    или
-                    <span style={{ color: 'blue' }}> Sony PlayStation 5! </span>
-                    Заполни форму ниже и приложи скриншот о покупке игры.
-                    Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
-                </Text>
                 <SimpleGrid ml='10%' columns={[1, null, 2]} spacing='50px'>
                     <Box>
-                        <FormControl>
-                            <FormLabel>Имя</FormLabel>
-                            <Input type='name' />
-                            <FormHelperText>Как тебя зовут</FormHelperText>
-                        </FormControl>
-                        <FormControl mt='20px' mb='20px'>
-                            <FormLabel>Email</FormLabel>
-                            <Input type='email' />
-                            <FormHelperText>Введите почту</FormHelperText>
-                        </FormControl>
-                        <Button variant='secondary'>Отправить</Button>
-                        <br />
-                        <Checkbox>
-                            согласие на обработку персональных данных
-                        </Checkbox>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexWrap: 'wrap',
+                            gap: '10px',
+                        }}>
+                            <Image src="/img/10.webp" alt="Img" loading='lazy' />
+                            <Image src="/img/12.webp" mr='20%' w='20%' alt="Img" loading='lazy' />
+                            <Image src="/img/11.webp" alt="Img" w='50%' loading='lazy' />
+                        </div>
                     </Box>
-                    <Box>
-                        <Image src="/img/7.webp" alt="Img" loading='lazy' />
+                    <Box ml='10%' mb='30px'>
+                        <Heading fontSize={headingSizes[variant]} >Играй и выигрывай!</Heading>
+                        <Text maxW={(variant === 'base' || variant === 'lg') ? '100%' : '70%'} wordBreak='break-word'
+                            fontSize={textSizes[variant]} mb='30px'>
+                            Погрузись в современные экшен-игры с реалистичным изображением с помощью монитора с диагональю 23,8 дюйма,
+                            созданном для отображения максимально насыщенных цветов.
+                            Успевай реагировать на любые события с временем отклика 1 мс и частотой в 144 Гц
+                        </Text>
+                        <List spacing={3} mb='30px'>
+                            <ListItem>
+                                <ViewIcon />
+                                Яркие насыщенные цвета
+                            </ListItem>
+                            <ListItem>
+                                <StarIcon />
+                                Кристальная четкость изображения
+                            </ListItem>
+                            <ListItem>
+                                <CopyIcon />
+                                Быстрые движения и плавный геймплей
+                            </ListItem>
+                        </List>
+                        <Button variant="primary" size={sizeMapping[variant]}>Подробнее</Button>
                     </Box>
                 </SimpleGrid>
             </Container>

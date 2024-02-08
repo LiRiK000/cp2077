@@ -40,16 +40,13 @@ function PlayAndWin() {
             <Image src="/img/8.webp" w='100vw' alt="Img 1" minH='40px' loading="lazy" />
             <Container maxW='100%' maxH='max-content' bg='primary.500' color='white'>
                 <Heading fontSize={headingSizes[variant]} ml='10%' mb='30px' color='white'>Играй и выигрывай!</Heading>
-                <Text maxW='70%' wordBreak='break-word' fontSize={textSizes[variant]} ml='10%' mb='30px'>
-                    Играй в
-                    <span style={{ color: 'blue' }}> Cyberpunk 2077 </span>
-                    и получи возможность выиграть консоль
-                    <span style={{ color: 'blue' }}> Xbox Series X </span>
+                <Text maxW={(variant === 'base' || variant === 'sm') ? '100%' : '70%'} wordBreak='break-word' fontSize={textSizes[variant]} ml='10%' mb='30px'>
+                    Играй в Cyberpunk 2077 и получи возможность выиграть консоль Xbox Series X
                     или
-                    <span style={{ color: 'blue' }}> Sony PlayStation 5! </span>
+                    Sony PlayStation 5!
                     Заполни форму ниже и приложи скриншот о покупке игры.
-                    Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
-                </Text>
+                    Итоги розыгрыша будут подведены 1 февраля.Удачи!;)
+                </Text >
                 <SimpleGrid ml='10%' columns={[1, null, 2]} spacing='50px'>
                     <Box>
                         <FormControl>
@@ -62,7 +59,7 @@ function PlayAndWin() {
                             <Input type='email' />
                             <FormHelperText>Введите почту</FormHelperText>
                         </FormControl>
-                        <Button variant='secondary'>Отправить</Button>
+                        <Button variant='secondary' mb='5px'>Отправить</Button>
                         <br />
                         <Checkbox>
                             согласие на обработку персональных данных
@@ -72,9 +69,9 @@ function PlayAndWin() {
                         <Image src="/img/7.webp" alt="Img" loading='lazy' />
                     </Box>
                 </SimpleGrid>
-            </Container>
+            </Container >
             <Image src="/img/9.webp" alt="Img 2" w='100vw' minH='40px' loading="lazy" />
-        </VStack>
+        </VStack >
     );
 }
 
