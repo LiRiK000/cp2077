@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { React } from 'react';
 
-function PlayAndWin() {
+function HP() {
     const variant = useBreakpointValue({ base: "base", sm: "sm", md: "md", lg: "lg", xl: 'xl', '2xl': '2xl' });
 
     const textSizes = {
@@ -37,8 +37,7 @@ function PlayAndWin() {
     };
     return (
         <VStack as='section' style={{ gap: '0' }}>
-            <Image src="/img/8.webp" w='100vw' alt="Img 1" minH='40px' loading="lazy" />
-            <Container maxW='100%' maxH='max-content' bg='primary.500' color='white'>
+            <Container maxW='100%' maxH='max-content' bg='secondary.500' color='primary.500'>
                 <Heading fontSize={headingSizes[variant]} ml='10%' mb='30px' color='white'>Играй и выигрывай!</Heading>
                 <Text maxW='70%' wordBreak='break-word' fontSize={textSizes[variant]} ml='10%' mb='30px'>
                     Играй в
@@ -73,9 +72,8 @@ function PlayAndWin() {
                     </Box>
                 </SimpleGrid>
             </Container>
-            <Image src="/img/9.webp" alt="Img 2" w='100vw' minH='40px' loading="lazy" />
         </VStack>
     );
 }
 
-export default PlayAndWin;
+export default HP;

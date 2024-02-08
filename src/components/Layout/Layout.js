@@ -2,6 +2,7 @@ import React from "react";
 import HeroComp from "../HeroComp/HeroComp";
 import CityChange from "../CityChangeComp/CC";
 import PlayAndWin from "../PlayAndWin/PaW";
+// import HP from "../HPPR/HP";
 
 function Layout () {
     return (
@@ -9,6 +10,7 @@ function Layout () {
             <HeroComp />
             <CityChange />
             <PlayAndWin />
+            {/* <HP /> */}
         </>
     );
 }
