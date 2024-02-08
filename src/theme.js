@@ -18,7 +18,7 @@ const theme = extendTheme({
     },
     fonts: {
         heading: "Alegreya, sans-serif;",
-        body: "Roboto, sans-serif",
+        body: "Alegreya, sans-serif",
     },
     space: {
         2: "8px",
