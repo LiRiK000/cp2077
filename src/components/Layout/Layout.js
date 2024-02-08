@@ -3,6 +3,7 @@ import HeroComp from "../HeroComp/HeroComp";
 import CityChange from "../CityChangeComp/CC";
 import PlayAndWin from "../PlayAndWin/PaW";
 import HP from "../HPPR/HP";
+import Buy from "../Buy/Buy";
 
 function Layout () {
     return (
@@ -11,6 +12,7 @@ function Layout () {
             <CityChange />
             <PlayAndWin />
             <HP />
+            <Buy />
         </>
     );
 }

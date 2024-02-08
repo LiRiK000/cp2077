@@ -57,9 +57,9 @@ function HP() {
                             <Image src="/img/11.webp" alt="Img" w='50%' loading='lazy' />
                         </div>
                     </Box>
-                    <Box ml='10%' mb='30px'>
-                        <Heading fontSize={headingSizes[variant]} >Играй и выигрывай!</Heading>
-                        <Text maxW={(variant === 'base' || variant === 'lg') ? '100%' : '70%'} wordBreak='break-word'
+                    <Box mb='30px'>
+                        <Heading fontSize={headingSizes[variant]} >Купить игру Cyberpunk 2077</Heading>
+                        <Text maxW={(variant === 'base' || variant === 'sm') ? '100%' : '70%'} wordBreak='break-word'
                             fontSize={textSizes[variant]} mb='30px'>
                             Погрузись в современные экшен-игры с реалистичным изображением с помощью монитора с диагональю 23,8 дюйма,
                             созданном для отображения максимально насыщенных цветов.

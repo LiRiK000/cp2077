@@ -4,7 +4,16 @@ const theme = extendTheme({
     styles: {
         global: {
             'html, body':{
-                overflowX: 'hidden'
+                overflowX: 'hidden',
+                userDrag: 'none',
+                webkitUserDrag: 'none'
+            },
+            'img':{
+                    mozUserSelect: 'none',
+                    webkitUserSelect: 'none',
+                    msUserSelect: 'none',
+                    userSelect: 'none',
+                    pointerEvents: 'none',
             }
         }
     },
